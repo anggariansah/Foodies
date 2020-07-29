@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.CartFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/iv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ECECEC"/>
+
+            <ImageView
+                android:id="@+id/iv_place"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#E0E0E0"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:layout_marginTop="-40dp"
+                app:srcCompat="@drawable/ic_place_red"/>
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Waroeng Ogout"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp" />
+
+            <TextView
+                android:id="@+id/tv_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jl Widyakrama kel balandongan"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="20dp" />
+
+
+            <TextView
+                android:id="@+id/tv_jarak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_place_red"
+                android:text="2,5 KM" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_keranjang"
+                tools:listitem="@layout/item_keranjang"
+                tools:itemCount="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
